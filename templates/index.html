@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load cache %}
+{% block title %}Последние обновления на сайте{% endblock %}
+{% block header %}{% endblock %}
+
+{% block content %}
+{% cache 20 index_page page_number%}
+
+
+   <div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+      {% include "includes/menu.html" with index=True %}
+      {% for post in page %}
+          {% include "includes/post_item.html" with post=post index=True%}
+      {% endfor %}
+
+
+    {% if page.has_other_pages %}
+        {% include "includes/paginator.html" with items=page paginator=paginator %}
+    {% endif %}
+        </div>
+        <div class="col-md-3 align-items-center">
+            {% include "includes/tags.html" with groups=groups %}
+
+        </div>
+            
+
+
+        </div>
+        </div>
+       
+{% endcache %}
+
+{% endblock %}
+

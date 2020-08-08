@@ -1,0 +1,60 @@
+<div class="card mb-3 mt-3 border-0">
+
+    <div class="card-body">
+        <h6 id="title">
+         {% if post.title %}
+            {{post.title}}
+         {% else %}
+             Без названия
+     {% endif %}
+     </h6>    
+     <div id="navbartop">{{ post.pub_date }}</div>
+        {% load thumbnail %}
+    {% thumbnail post.image "690x460" crop="center" padding=True upscale=True as im %}
+    <a name="post_{{ post.id }}"  style="padding-bottom: 20px" href="{% url 'profile' post.author.username %}">
+       Автор: {{ post.author }}
+    </a>
+    {% if post.group %}
+        <a class="card-link muted" href="{% url 'groups' post.group.slug %}">
+                <strong class="d-block text-gray">#{{ post.group.title }}</strong>
+        </a>
+     {% endif %}
+    <img class="card-img" src="{{ im.url }}" style="border-radius: 0; width: 690px;">
+    {% endthumbnail %}
+        <p class="card-text">
+          {% if index %}
+            {{ post.text|linebreaksbr|truncatewords:30  }} <br>
+            <div>
+            <a id="follow"href="{% url 'post' post.author.username post.id %}">Читать далее</a>
+        </div>
+        
+        {% if not forloop.last %}<hr>{% endif %} 
+          {% else %}
+          {{ post.text|linebreaksbr}}
+          <div class="d-flex justify-content-between align-items-center">
+            <div style="margin-top: 10px">
+                <div id="button" style="margin-bottom: 20px;">
+                <a href="#comments" role="button">
+                    {% if post.comments.exists %}
+                    Комментариев: {{ post.comments.count }} 
+                    {% endif %}
+                </a>
+            </div>
+                 {% if user == post.author %}
+                 <div id="follow" style="padding: 10px">
+                 <a href="{% url 'post_edit' post.author.username post.id %}"
+                        role="button">Редактировать
+                </a>
+            </div>
+                {% endif %}
+            </div>
+        </div>
+
+          {% endif %}
+           
+        </p>
+        
+        
+       
+    </div>
+</div>

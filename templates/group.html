@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% block title %}Записи по тегу #{{ group.title }}{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-9">
+        {% include "includes/menu_group.html" with tag=True group_tag=group.title %}
+
+    {% for post in page %}
+        {% include "includes/post_item.html" with post=post %}
+    {% endfor %}
+
+    {% if page.has_other_pages %}
+        {% include "includes/paginator.html" with items=page paginator=paginator %}
+    {% endif %}
+    </div>
+    <div class="col-md-3 align-items-center">
+        {% include "includes/tags.html" with groups=groups %}
+    
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,191 @@
+.btn {
+    border-radius: 0;
+}
+button:hover{
+    color: #ffffff;
+}
+img {
+    border-radius: 0;
+    border: 0px;
+    max-width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body {
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 14px;
+    font-family: PT Serif, Tahoma, Helvetica, FreeSans, sans-serif;
+    color: #4f4f4f;
+}
+
+.h1, h1{
+    font: normal normal 16px Open Sans, Helvetica, FreeSans, sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 0px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-bottom: 0px;
+
+    /*font-weight: 800;*/
+
+}
+
+#navbartop {
+    width: 100%;
+    font: normal normal 10px Open Sans, Helvetica, FreeSans, sans-serif;
+    font-style: normal;
+    color: #4f4f4f;
+    padding-left: 0px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 30px 0 0;
+    margin-top: 0px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+a {
+   color: black;
+}
+a:hover {
+    color: #959595;
+}
+
+.nav-tabs {
+    border-bottom: 1px dotted #cbcbcb;
+    margin-bottom: 20px;
+}
+
+#title {
+    font: 16px Open Sans, Helvetica, FreeSans, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    font-weight: 800;
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+#button {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-left: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+#button a:hover{
+    text-decoration: none;
+}
+
+#circle {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#list{
+    display: block;
+    letter-spacing: 1px;
+    padding: 6px 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#list a{
+    background-color: #cbcbcb;
+    color: #4f4f4f;
+    display: block;
+    letter-spacing: 1px;
+    padding: 6px 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#list a:hover {
+    background-color: #4f4f4f;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+#listitem{
+    letter-spacing: 1px;
+    color: #4f4f4f;
+}
+
+li{
+    list-style-type:none
+}
+
+#card-text{
+    font: 14px Open Sans, Helvetica, FreeSans, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+}
+
+#follow {
+    background-color: #fff;
+    color: #4f4f4f !important;
+    border: 1px solid #4f4f4f;
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 6px 0;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 150px;
+}
+
+#follow:hover {
+    background-color: #cbcbcb;
+    color: white;
+    text-decoration: none;
+    
+}
+
+#unfollow {
+    background-color: rgb(240, 240, 240);
+    color: #4f4f4f !important;
+    border: 1px solid #4f4f4f;
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 6px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+}
+
+#unfollow a:hover {
+    text-decoration: none;
+    background-color: #cbcbcb;
+}
+#unfollow:hover {
+    background-color: #959595;
+    color: white;
+    text-decoration: none;
+    
+}
