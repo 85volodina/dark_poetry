@@ -1,42 +1,42 @@
-    <div class="card" style="margin-top: 30px;">
-        <div class="card-body">
-            <div class="h2" id="card-text">
-                {{ author_name }}
-            </div>
-            <div class="h7 text-muted">
-                {{ author.username }}
-            </div>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-                <div class="h7 text-muted">
-                    Подписчиков: {{followers_count}} <br />
-                    Подписан: {{following_count}}
-                </div>
-            </li>
-            <li class="list-group-item">
-                <div class="h7 text-muted">
-                    Записей: {{ posts_count }}
-                </div>
-        
-            </li>
-            <li class="list-group-item">
-                {% if following %}
-                <div>
-                <a id="unfollow"
-                 href="{% url 'profile_unfollow' author.username %}" role="button"> 
-                        Отписаться 
-                </a> 
-            </div>
-                {% else %}
-               <div>
-                <a id="follow"
-                href="{% url 'profile_follow' author.username %}">
-                   Подписаться 
-                </a>
-            </div>
-                {% endif %}
-            </li>
-        </ul>
-        
+<div class="card" style="margin-top: 30px;">
+  <div class="card-body">
+    <div class="h2" id="card-text">
+      {{ author_name }}
     </div>
+    <div class="h7 text-muted">
+      {{ author.username }}
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <div class="h7 text-muted">
+        Подписчиков: {{followers_count}} <br />
+        Подписан: {{following_count}}
+      </div>
+    </li>
+    <li class="list-group-item">
+      <div class="h7 text-muted">
+        Записей: {{ posts_count }}
+      </div>
+    </li>
+    <li class="list-group-item">
+      {% if following %}
+      <div>
+        <a
+          id="unfollow"
+          href="{% url 'profile_unfollow' author.username %}"
+          role="button"
+        >
+          Отписаться
+        </a>
+      </div>
+      {% else %}
+      <div>
+        <a id="follow" href="{% url 'profile_follow' author.username %}">
+          Подписаться
+        </a>
+      </div>
+      {% endif %}
+    </li>
+  </ul>
+</div>

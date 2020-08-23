@@ -2,6 +2,7 @@
 
 {% if user.is_authenticated %} 
 <div class="card my-4">
+<a name="add_comment"></a>
 <form
     action="{% url 'add_comment' post.author.username post.id %}"
     method="post">
@@ -21,7 +22,9 @@
 
 <!-- Комментарии -->
 <a name="comments"></a>
+{% if comments %}
 <p id="navbartop" style="font-size: 16px;">Комментарии:</p>
+{% endif %}
 {% for item in comments %}
 <div class="media mb-4">
 <div class="media-body">

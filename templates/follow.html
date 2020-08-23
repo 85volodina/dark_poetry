@@ -10,7 +10,7 @@
 {% include "includes/menu.html" with follow=True %}
 
     {% for post in page %}
-        {% include "includes/post_item.html" with post=post %}
+        {% include "includes/post_item.html" with post=post fol=True%}
     {% endfor %}
 
     {% if page.has_other_pages %}
