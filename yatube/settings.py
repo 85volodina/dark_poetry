@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 import environ
 from django.urls import reverse_lazy
-import dj_database_url
+#import dj_database_url
 
 
 env = environ.Env(DEBUG=(bool, False))
@@ -177,7 +177,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Heroku: Update database configuration from $DATABASE_URL.
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+#db_from_env = dj_database_url.config(conn_max_age=500)
+#DATABASES['default'].update(db_from_env)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
